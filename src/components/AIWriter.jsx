@@ -193,3 +193,177 @@ const AIWriter = ({ showToast }) => {
 };
 
 export default AIWriter;
+
+<style jsx="true">{`
+  .ai-writer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #00ffae;
+  }
+
+  .writer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .writer-container {
+      flex-direction: row;
+    }
+  }
+
+  .input-section,
+  .output-section {
+    flex: 1;
+    background: #1c1c1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,255,174,0.1);
+  }
+
+  textarea {
+    width: 100%;
+    height: 150px;
+    background: #2a2a2d;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 1rem;
+    resize: none;
+    font-size: 1rem;
+  }
+
+  .floating-label-group {
+    position: relative;
+  }
+
+  .floating-label-group label {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    color: #aaa;
+    transition: 0.2s;
+    pointer-events: none;
+    font-size: 1rem;
+  }
+
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    background: #1c1c1e;
+    padding: 0 4px;
+    font-size: 0.8rem;
+    color: #00ffae;
+  }
+
+  .controls {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .generate-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background: #00ffae;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .generate-button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .spinner {
+    border: 2px solid #000;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .word-count {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+
+  .output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copy-button {
+    background: #2a2a2d;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .output-content {
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  .output-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .output-content::-webkit-scrollbar-thumb {
+    background: #00ffae;
+    border-radius: 10px;
+  }
+
+  .generated-text {
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
+
+  .skeleton-loader .skeleton-line {
+    height: 12px;
+    background: #444;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #888;
+    text-align: center;
+    margin-top: 2rem;
+  }
+`}</style>

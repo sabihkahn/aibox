@@ -94,6 +94,8 @@ import { motion } from 'framer-motion';
 import imagegen from '../assets/IMGGEN.png';
 import contentgen from '../assets/PROMTRES.png';
 import VideoDemo from '../VideoDemo';
+import Testimonials from '../Testimonials';
+import LeaveComment from '../LeaveComment';
 
 const ParticleBackground = () => {
   const [particles, setParticles] = useState([]);
@@ -213,6 +215,19 @@ const Hero = ({ setActiveTab }) => {
               >
                 Start Writing Now
               </motion.button>
+              <motion.button 
+                className="primary-button"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 15px rgba(145, 255, 0, 0.5)",
+                  backgroundColor: "#ffd900",
+                  color: "#000"
+                }}
+                whileTap={{ scale: 0.95 }} 
+               onClick={() => setActiveTab('contact')}
+              >
+                contact us
+              </motion.button>
             
             </motion.div>
           </div>
@@ -261,7 +276,7 @@ const Hero = ({ setActiveTab }) => {
     className="feature-card"
     initial={{ opacity: 0, x: -100 }}
     whileInView={{ opacity: 1, x: 0 }}
-    transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
+    transition={{ delay: 0.3, duration: 0.4, type: "spring" }}
     viewport={{ once: true, amount: 0.5 }}
   >
     <img src={imagegen} alt="Image Generator" className="feature-img" />
@@ -276,7 +291,7 @@ const Hero = ({ setActiveTab }) => {
     className="feature-card"
     initial={{ opacity: 0, x: 100 }}
     whileInView={{ opacity: 1, x: 0 }}
-    transition={{ delay: 0.6, duration: 0.8, type: "spring" }}
+    transition={{ delay: 0.3, duration: 0.4, type: "spring" }}
     viewport={{ once: true, amount: 0.5 }}
   >
     <div className="feature-text">
@@ -287,6 +302,8 @@ const Hero = ({ setActiveTab }) => {
   </motion.div>
 </section>
 <VideoDemo />
+<Testimonials />
+<LeaveComment />
     </div>
   );
 };

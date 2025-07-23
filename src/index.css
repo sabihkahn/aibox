@@ -186,7 +186,8 @@ button {
 .desktop-nav ul {
   display: flex;
   list-style: none;
-  gap:32px;
+
+  gap:2px;
 }
 
 .nav-tab {
@@ -194,7 +195,7 @@ button {
   color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
-  padding: 20px;
+  padding: 3px;
   position: relative;
 }
 
@@ -1030,21 +1031,24 @@ button {
   z-index: 10;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-nav ul {
   list-style: none;
-  padding: 1rem;
+  padding: 1px;
 }
 
 .mobile-nav-tab {
-  display: block;
+  display: flex;
   width: 100%;
-  padding: 1rem;
+  flex-direction: column;
+  padding: 3px;
   background: transparent;
   color: var(--text-secondary);
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 15px;
   border: none;
   position: relative;
 }
@@ -1070,6 +1074,7 @@ button {
   
   .mobile-menu-button {
     display: flex;
+    flex-direction: column;
   }
   
   .dark-mode-toggle {
