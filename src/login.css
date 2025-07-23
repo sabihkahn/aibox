@@ -1,0 +1,142 @@
+/* === Base Reset & Body === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0A0A0F;
+  color: #E0E0E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Container & Card === */
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1rem;
+}
+.form-box {
+  background: linear-gradient(145deg, #12121A, #1A1A25);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 255, 153, 0.15);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* floating hexagon background accent */
+.form-box::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 255, 153, 0.05);
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+/* === Heading === */
+.form-box h2 {
+  text-align: center;
+  color: #00FF99;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* === Form Elements === */
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-box input {
+  background: #0A0A0F;
+  border: 2px solid #1A1A25;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #E0E0E0;
+  font-size: 1rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.form-box input::placeholder {
+  color: #555;
+}
+
+.form-box input:focus {
+  background: #12121A;
+  border-color: #00FF99;
+  outline: none;
+}
+
+/* === Submit Button === */
+.form-box button {
+  background: #00FF99;
+  color: #0A0A0F;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 255, 153, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 153, 0.6);
+}
+
+.form-box button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 255, 153, 0.3);
+}
+
+/* === Toggle Link === */
+.form-box p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.form-box p:hover {
+  color: #00FF99;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 400px) {
+  .form-box {
+    padding: 2rem 1.5rem;
+  }
+  .form-box h2 {
+    font-size: 1.75rem;
+  }
+}
