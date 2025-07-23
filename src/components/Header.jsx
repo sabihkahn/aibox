@@ -87,7 +87,7 @@ const Header = ({ activeTab, setActiveTab, darkMode, setDarkMode }) => {
       background: 'transparent',
       border: 'none',
       cursor: 'pointer',
-      color: darkMode ? '#fff' : '#000',
+      color: darkMode ? '#fff' : '#fff',
       marginLeft: '1rem',
     },
     mobileButton: {

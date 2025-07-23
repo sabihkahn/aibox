@@ -14,7 +14,7 @@ import Footer from './Footer';
 import Imagegen from '../assets/Imagegen';
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState('home');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [toast, setToast] = useState(null);
   
   const showToast = (message, type) => {
