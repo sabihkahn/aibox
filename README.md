@@ -4,19 +4,19 @@
 ## 📸 Screenshots
 
 ### Main Interface
-![Main Screen](https://ibb.co/RVbz0Pn)
+![Main Screen]([https://ibb.co/RVbz0Pn](https://res.cloudinary.com/dtscqvglz/image/upload/v1768412663/uz7kxp1r0rkyhyqybt6m.png))
 
 ### Image Generation Result
-![Image Result](https://ibb.co/KjZcSZSt)
+![Image Result]([https://ibb.co/KjZcSZSt](http://res.cloudinary.com/dtscqvglz/image/upload/v1768412714/hz28ktcexggrkbelyorj.png))
 
 ### Code Generation Output
-![Code Output](https://ibb.co/d4PjpRk9)
+![Code Output]([https://ibb.co/d4PjpRk9](http://res.cloudinary.com/dtscqvglz/image/upload/v1768412755/r4r49rb3tpb4n7vhxf6i.png))
 
 ### API Response / Conversations
-![Convo / API Result](https://ibb.co/dw7ccH9H)
+![Convo / API Result]([https://ibb.co/dw7ccH9H](http://res.cloudinary.com/dtscqvglz/image/upload/v1768412755/r4r49rb3tpb4n7vhxf6i.png))
 
 ### Other Feature Preview
-![Feature Preview](https://ibb.co/CKDYdGNd)
+![Feature Preview]([https://ibb.co/CKDYdGNd](http://res.cloudinary.com/dtscqvglz/image/upload/v1768412814/qrnegrtgobjlgqlnzc1a.png))
 
 ---
 
